@@ -4183,8 +4183,8 @@ const labelsOneHot = tf.oneHot(tf.tensor1d(trainingOutput, 'int32'), 48);
 // Model details
 const model = tf.sequential();
 
-model.add(tf.layers.dense({ units: 96, activation: 'relu', inputShape: [512] }));
-// model.add(tf.layers.dense({ units: 75, activation: 'relu' }));
+model.add(tf.layers.dense({ units: 128, activation: 'relu', inputShape: [512] }));
+model.add(tf.layers.dense({ units: 75, activation: 'relu' }));
 model.add(tf.layers.dense({ units: 48, activation: 'softmax' }));
 
 model.compile({ optimizer: 'adam', loss: 'categoricalCrossentropy', metrics: ['accuracy'] });
