@@ -12,8 +12,13 @@ import smithWaterman from "./stringAlgorithms/editDistance/smithWaterman.js";
 
 const input = dataManipulation(["bob bank"]);
 console.log("input", input)
-levenshteinDistance(input[0], initialData);
+// levenshteinDistance(input[0], initialData);
 // damerauLevenshteinDistance(input[0], initialData);
 // jaroSimilarity(input[0], initialData);
 // jaroWinkler(input[0], initialData)
 // smithWaterman(input[0], initialData)
+
+
+import levenshteinFn from "./stringCompare/levenshtein.js";
+
+levenshteinFn(input[0], initialData)
